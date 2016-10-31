@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', startGame)
 
 // Define your `board` object here!
 var board = {
-  cells: [new cell(1,1), new cell(2,2), new cell(3,3), new cell(0,0)]
+  cells: [new cell(1,1), new cell(0,1), new cell(1,0), new cell(0,0)]
 }
 
 function cell(r,c){
@@ -10,6 +10,13 @@ function cell(r,c){
   this.col = c;
   this.isMine = false;
   this.hidden = false;
+}
+
+function mine(r.c){
+  this.row = r;
+  this.col = c;
+  this.isMine = true;
+  this.hidden = true;
 }
 
 function startGame () {
