@@ -16,10 +16,6 @@ body {
   align-items: center;
 }
 
-#reset {
-  display: flex;
-}
-
 .board {
   display: flex;
   flex-wrap: wrap;

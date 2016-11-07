@@ -82,7 +82,3 @@ function countSurroundingMines (cell) {
   }
   return count;
 }
-
-function reset(){
-	console.log("Would you like to restart?");
-}
