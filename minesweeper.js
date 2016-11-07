@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', startGame)
 
 // Define your `board` object here!
-var board = createBoard(3,3);
+var size = prompt("How big would you like your game board?",6)
+var board = createBoard(size);
 
 function cell(r,c){
   this.row = r;
@@ -10,20 +11,12 @@ function cell(r,c){
   this.hidden = true;
 }
 
-// function mine(r,c){
-//   this.row = r;
-//   this.col = c;
-//   this.isMine = true;
-//   this.hidden = true;
-// }
-
-
-function createBoard(row,col){
+function createBoard(size){
 	var board = {
 		cells: []
 	}
-	for(i=0; i<row; i++){
-		for(j=0; j<col; j++){
+	for(i=0; i<size; i++){
+		for(j=0; j<size; j++){
 			var c = new cell(i,j);
 			if(Math.random()<0.2){
 				c.isMine = true;
